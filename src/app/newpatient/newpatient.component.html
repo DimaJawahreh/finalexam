@@ -1,0 +1,95 @@
+<form #f="ngForm">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="form-group">
+        <label >First Name</label>
+        <input type="text" class="form-control" ngModel  name="txtfname">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="form-group">
+          <label >Last Name</label>
+          <input type="text" class="form-control"ngModel  name="txtlname">
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="form-group">
+          <label >Country</label>
+          <select class="form-control" ngModel  name="ddlcnt">
+            <option *ngFor="let item of licounrty" [value]="item.id">{{item.name}}</option>
+          </select>
+        </div>
+      </div>
+  
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="form-group">
+        <label >BDate</label>
+        <input type="text" class="form-control" ngModel  name="txtdate">
+      </div>
+    </div>
+
+</div>
+<div class="row">
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label >City</label>
+      <select class="form-control" ngModel  name="ddlcity">
+        <option *ngFor="let item of licity" [value]="item.id">{{item.name}}</option>
+      </select>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label >BedNo</label>
+      <select class="form-control"ngModel  name="ddlbed">
+        <option *ngFor="let item of libed" [value]="item.id">{{item.name}}</option>
+      </select>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label >Department</label>
+      <select class="form-control" ngModel  name="ddldepartment">
+        <option *ngFor="let item of lidept" [value]="item.id">{{item.name}}</option>
+      </select>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label >RoomNo</label>
+      <select class="form-control" ngModel  name="ddlroom">
+        <option *ngFor="let item of liroom" [value]="item.id">{{item.name}}</option>
+      </select>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label >Doctor</label>
+      <select class="form-control" ngModel  name="ddldoct">
+        <option *ngFor="let item of lidoct"[value]="item.id">{{item.name}}</option>
+      </select>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <input type="button" value="Save" (click)="OnSave()" class="btn btn-primary">
+</div>
+</div>
+</form>
